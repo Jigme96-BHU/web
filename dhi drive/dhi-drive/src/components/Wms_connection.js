@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import HookMqtt from '.'
 
+
 function Wms_connection() {
     return (
         <div>
@@ -29,6 +30,17 @@ function Wms_connection() {
                                         </div>
                                         </Link>
                                     </div>
+
+                                    <div>
+                                        <Link to="/Table">
+                                        <div class="w-full text-white  flex items-center pl-6 p-2 my-2 transition-colors duration-200 justify-start ">
+                                            <span class="mx-2 text-sm font-normal">
+                                                Table
+                                            </span>
+                                        </div>
+                                        </Link>
+                                    </div>
+
                                 </nav>
                              {/******************************* End of Side Nav section **********************************/}
                         </div>
