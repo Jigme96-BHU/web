@@ -1,17 +1,17 @@
 import React from 'react'
-import {Link} from "react-router-dom"
-import MapDiff from './Map/MapDiff'
+import {Link} from 'react-router-dom'
+import MyTable from './Table/MyTable'
 
 
-function Wms_map() {
+function Wms_Table() {
     return (
-        <div>           
+        <div>
             <main class="bg-white h-screen overflow-hidden relative">
                 <div class="flex items-start justify-between">
                     <div class="h-screen hidden lg:block shadow-lg relative w-80">
                         <div class="bg-back h-full ">
                             <div class=" h-20 bg-DHI-LOGO bg-contain bg-no-repeat bg-center"/>
-                        {/*********************** Side Nav Component ***************************/}
+                            {/*********************** Side Nav Component ***************************/}
                                 <nav class="mt-6">
                                     <div>
                                         <Link to="/">
@@ -20,38 +20,36 @@ function Wms_map() {
                                                 Water Dashboard
                                             </span>
                                         </div>
-                                        
                                         </Link>
+                                        
                                     </div>
 
                                     <div>
-                                        <div class="w-full text-white  flex items-center pl-6 p-2 my-2 transition-colors duration-200 justify-start border-l-4 border-primary" >
+                                        <Link to="/Water_map">
+                                        <div class="w-full text-white  flex items-center pl-6 p-2 my-2 transition-colors duration-200 justify-start ">
                                             <span class="mx-2 text-sm font-normal">
                                                 Map
                                             </span>
                                         </div>
-                                        
+                                        </Link>
                                     </div>
 
                                     <div>
-                                        <Link to="/Table">
-                                        <div class="w-full text-white  flex items-center pl-6 p-2 my-2 transition-colors duration-200 justify-start ">
+                                        
+                                        <div class="w-full text-white  flex items-center pl-6 p-2 my-2 transition-colors duration-200 justify-start border-l-4 border-primary">
                                             <span class="mx-2 text-sm font-normal">
                                                 Table
                                             </span>
                                         </div>
-                                        </Link>
+                                        
                                     </div>
 
-
-                                    
-                                    
                                 </nav>
-                                
                              {/******************************* End of Side Nav section **********************************/}
                         </div>
                     </div>
                     
+                    {/* Main Body */}
                     <div class="flex flex-col w-full md:space-y-4">
                         {/******************************* Header **********************************/}
                         <header class="w-full h-16 z-40 flex items-center justify-between">
@@ -72,21 +70,18 @@ function Wms_map() {
                         {/******************************* Header End **********************************/}
 
                         {/******************************* Dash Content  **********************************/}
-                        <div className="overflow-auto bg-gray-100 h-screen pb-24 px-4 md:px-6">
-                        {/* Provision for Map API */}
-                        {/* <iframe title="BHT Map"  width="100%" height="600" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=thimphu+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>                       */}
-                         
-                            {/* <Map_New/> */}
-                            <MapDiff/>
-                            {/* <MyTable/> */}
-
-                         </div>
-                        {/************************ Dash content end ************************************/}
-                    </div>            
+                        <div class="overflow-auto bg-gray-100 h-screen pb-24 px-4 md:px-6">
+                        <h1 class="text-4xl font-semibold text-gray-800 my-4  ">
+                                Water Information  
+                        </h1>
+                            <MyTable/>
+                        </div>
+                    </div>
+                    {/* Main Body Ends */}
                 </div>
             </main>  
-        </div>
+        </div>    
     )
 }
 
-export default Wms_map
+export default Wms_Table
